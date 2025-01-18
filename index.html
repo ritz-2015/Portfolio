@@ -39,13 +39,48 @@
                     <h1 class="sub-title">About Me</h1>
                     <p class="about-info"><br>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos est nobis excepturi, tempora aperiam repellendus sit at amet earum incidunt dolore, maiores itaque enim accusantium dicta labore quam. Accusantium vero quae porro. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius accusantium ex alias in dolore, laudantium nisi labore eum, officia excepturi tempore assumenda nobis dicta quod ut quis, perspiciatis voluptatem sed obcaecati placeat tenetur error. Commodi iure, molestiae ut possimus similique ipsam maiores. Recusandae!</p>
                     <div class="tab-titles">
-                        <p class="tab-links">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                        <p class="tab-links" onclick="opentab('education')" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designer</li>
+                            <li><span>Web Developement</span><br>Front and Back End</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Jan - Feb 2024</span><br>UI/UX Design Intern</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020</span><br>10th - 94.4%</li>
+                            <li><span>2022</span><br>12th - 93.4%</li>
+                            <li><span>2026</span><br>B.E. - Current Aggregate - 9.4 cgpa</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
 </body>
 </html>
