@@ -297,3 +297,32 @@ nav ul li a:hover::after{
 .btn:hover{
     background: rgba(1, 28, 135, 0.6);
 }
+
+/* -------------contact----------- */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #032081;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: ;
+}
